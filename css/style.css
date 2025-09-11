@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    font-family: "Arimo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    align-items: center;
+    justify-content: center;
+}
+
+.container-nav {
+    position: fixed;
+    display: flex;
+    border-radius: 100px;
+    border: 1px solid #00000033;
+    background: #faf4f0e6;
+    backdrop-filter: blur(10px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container-buttons-nav {
+    display: flex;
+}
