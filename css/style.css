@@ -1,35 +1,187 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 * {
-    font-family: "Arimo", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 nav {
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding: 1vh 0vw;
 }
 
 .container-nav {
-    position: fixed;
-    display: flex;
-    border-radius: 100px;
-    border: 1px solid #00000033;
-    background: #faf4f0e6;
-    backdrop-filter: blur(10px);
-    left: 50%;
-    transform: translateX(-50%);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  /* centraliza verticalmente */
+  justify-content: center;
+  gap: 2vw;
+  /* espaço entre logo e botões */
+  border-radius: 100px;
+  border: 1px solid #00000033;
+  background: #fff7eca2;
+  backdrop-filter: blur(7px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1vh 1vw;
 }
 
 .container-buttons-nav {
-    display: flex;
+  display: flex;
+  align-items: center;
+}
+
+.img-logo {
+  width: 8vw;
+}
+
+.button-nav {
+  display: flex;
+  align-items: center;
+  /* texto centralizado no meio */
+  justify-content: center;
+  text-decoration: none;
+  color: #636363;
+  padding: 0.4em 1em;
+  /* deixa cada botão mais clicável */
+  border-radius: 50px;
+}
+
+.text-button-nav {
+  margin: 0;
+}
+
+.button-nav:last-child {
+  background-color: #FF8832;
+  color: #ffffff;
+
+}
+
+header {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5vw;
+  background-image: url("../assets/backgroundHeader.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container-elements-header {
+  display: flex;
+  align-items: center;
+}
+
+.container-img-header {
+  margin-left: 10vw;
+}
+
+.img-header {
+  width: 35vw;
+}
+
+.tittle-header {
+  color: #fff;
+  font-weight: 900;
+}
+
+.container-subtittle-header {
+  display: flex;
+  align-items: center;
+}
+
+.subtittle-header {
+  margin: 0;
+  color: #fff;
+}
+
+.button-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #464646;
+  background-color: #ffffff;
+  border-radius: 50px;
+  margin-left: 1vw;
+}
+
+.text-button-header {
+  margin: 0;
+  padding: 0.4vh 1vw;
+}
+
+.first-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../assets/backgroundFirstSection.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 80vh;
+}
+
+.container-tittle-first {
+  background-color: #fff;
+  display: inline-block;
+  /* ocupa só o necessário */
+  border-radius: 6px;
+  /* opcional, arredonda */
+  width: fit-content;
+  justify-content: center;
+  margin-top: 2vh;
+}
+
+.tittle {
+  font-weight: 900;
+  font-size: 3vw;
+}
+
+.container-software-first {
+  display: flex;
+  align-items: center;
+}
+.container-img-text{
+  display: flex;
+  padding: 2vw;
+}
+
+.software-img1-first {
+  width: 40vw;
+  /* position: absolute; */
+  z-index: 3;
+  border-radius: 1vw;
+}
+
+.software-img2-first {
+  width: 35vw;
+  /* position: absolute; */
+  z-index: 2;
+  margin-right: -30vw;
+  border-radius: 1vw;
+}
+
+.software-img3-first {
+  width: 30vw;
+  /* position: absolute; */
+  z-index: 1;
+  margin-right: -25vw;
+  border-radius: 1vw;
 }
 
 /* Tamanho do carousel */
@@ -51,7 +203,8 @@ nav {
   width: 100%;
   height: 500px;
   object-fit: cover;
-  background: #000; /* fundo para preencher espaços */
+  background: #000;
+  /* fundo para preencher espaços */
   border-radius: 10px;
 }
 
@@ -88,7 +241,8 @@ nav {
 .carousel-control-prev,
 .carousel-control-next {
   height: 100%;
-  width: 50px; /* largura do botão */
+  width: 50px;
+  /* largura do botão */
   top: 0;
   bottom: 0;
   position: absolute;
@@ -114,9 +268,10 @@ nav {
 /* Ícones das setas menores e mais proporcionais dentro do botão */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  width: 24px;               /* tamanho do ícone */
+  width: 24px;
+  /* tamanho do ícone */
   height: 24px;
-  background-size: 100% 100%; 
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 50%;
