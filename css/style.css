@@ -1,48 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 * {
-    font-family: "Arimo", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 nav {
-    align-items: center;
-    justify-content: center;
-}
-
-.container-nav {
-    position: fixed;
-    display: flex;
-    border-radius: 100px;
-    border: 1px solid #00000033;
-    background: #faf4f0e6;
-    backdrop-filter: blur(10px);
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.container-buttons-nav {
-    display: flex;
-}
-
-.carousel-section {
-  width: 90vw; 
-  height: 700px;
-  margin: 40px auto;
-  position: relative;
-  flex-direction: column;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.container-nav {
+  position: fixed;
+  display: flex;
+  border-radius: 100px;
+  border: 1px solid #00000033;
+  background: #faf4f0e6;
+  backdrop-filter: blur(10px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container-buttons-nav {
+  display: flex;
+}
+
+.carousel-background {
+  width: 100vw;
+  height: fit-content;
+  background: radial-gradient(ellipse at center, #d3d3d3 0%, #444 40%, #181818 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8vh;
+}
+
+.carousel-section {
+  width: 90vw; /* largura menor, controlada */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent; /* sem background aqui */
+  color: #fff;
+  height: 700px;
+}
 
 #sparqCarousel {
   width: 100%;
@@ -58,8 +68,10 @@ nav {
 .carousel-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;         /* imagens preenchem e cortam proporcionalmente */
-  border-radius: 10px;       /* bordas arredondadas opcionais */
+  object-fit: cover;
+  /* imagens preenchem e cortam proporcionalmente */
+  border-radius: 10px;
+  /* bordas arredondadas opcionais */
 }
 
 .carousel-caption {
@@ -75,9 +87,11 @@ nav {
   top: 0;
   background: transparent;
 }
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  width: 24px;         /* tamanho real do ícone */
+  width: 24px;
+  /* tamanho real do ícone */
   height: 24px;
   border-radius: 50%;
   display: block;
@@ -85,8 +99,10 @@ nav {
   transition: background-color 0.3s ease;
 
   /* aumentar área do fundo */
-  padding: 10px;        /* aumenta o fundo além do ícone */
-  box-sizing: content-box; /* padding não altera tamanho do elemento, cria espaço extra */
+  padding: 10px;
+  /* aumenta o fundo além do ícone */
+  box-sizing: content-box;
+  /* padding não altera tamanho do elemento, cria espaço extra */
 }
 
 /* Hover permanece igual */
