@@ -42,6 +42,10 @@ nav {
   padding: 8vh;
 }
 
+.carousel-background h1{
+  padding-bottom: 2vh;
+}
+
 .carousel-section {
   width: 90vw; /* largura menor, controlada */
   position: relative;
