@@ -32,102 +32,65 @@ nav {
     display: flex;
 }
 
-/* Tamanho do carousel */
-#carouselExampleCaptions {
-  width: 80vw;
-  height: 70vh;
+.carousel-section {
+  width: 90vw; 
+  height: 700px;
   margin: 40px auto;
   position: relative;
-}
-
-/* Cada slide ocupa 100% do container */
-#carouselExampleCaptions .carousel-item {
-  height: 100%;
-  position: relative;
-}
-
-/* Imagens preenchendo, contidas */
-.carousel-item img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  background: #000; /* fundo para preencher espaços */
-  border-radius: 10px;
-}
-
-/* Indicadores retangulares */
-.carousel-indicators [data-bs-target] {
-  width: 30px;
-  height: 8px;
-  border-radius: 4px;
-  background-color: #000;
-  opacity: 0.5;
-  margin: 0 4px 0 0;
-}
-
-.carousel-indicators .active {
-  opacity: 1;
-  background-color: #000;
-}
-
-/* Legenda sobreposta no slide */
-.carousel-caption {
-  position: absolute;
-  bottom: 40px;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 6px;
-  padding: 10px 20px;
-  color: #fff;
-  text-align: center;
-  user-select: none;
-}
-
-/* Botões de controle */
-.carousel-control-prev,
-.carousel-control-next {
-  height: 100%;
-  width: 50px; /* largura do botão */
-  top: 0;
-  bottom: 0;
-  position: absolute;
+  flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 10;
 }
 
-/* Botão anterior alinhado à esquerda */
-.carousel-control-prev {
-  left: 10px;
+
+#sparqCarousel {
+  width: 100%;
+  height: 100%;
 }
 
-/* Botão próximo alinhado à direita */
+.carousel-inner,
+.carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* imagens preenchem e cortam proporcionalmente */
+  border-radius: 10px;       /* bordas arredondadas opcionais */
+}
+
+.carousel-caption {
+  padding: 10px 20px;
+  user-select: none;
+}
+
+/* Botões de controle com tamanho proporcional */
+.carousel-control-prev,
 .carousel-control-next {
-  right: 10px;
+  width: 40px;
+  height: 100%;
+  top: 0;
+  background: transparent;
 }
-
-/* Ícones das setas menores e mais proporcionais dentro do botão */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  width: 24px;               /* tamanho do ícone */
+  width: 24px;         /* tamanho real do ícone */
   height: 24px;
-  background-size: 100% 100%; 
-  background-position: center;
-  background-repeat: no-repeat;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.7);
   display: block;
   margin: auto;
   transition: background-color 0.3s ease;
+
+  /* aumentar área do fundo */
+  padding: 10px;        /* aumenta o fundo além do ícone */
+  box-sizing: content-box; /* padding não altera tamanho do elemento, cria espaço extra */
 }
 
-/* Hover efeito nos ícones */
+/* Hover permanece igual */
 .carousel-control-prev:hover .carousel-control-prev-icon,
 .carousel-control-next:hover .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.459);
 }
