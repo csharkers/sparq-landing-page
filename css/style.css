@@ -23,10 +23,8 @@ nav {
   position: fixed;
   display: flex;
   align-items: center;
-  /* centraliza verticalmente */
   justify-content: center;
   gap: 2vw;
-  /* espaço entre logo e botões */
   border-radius: 100px;
   border: 1px solid #00000033;
   background: #fff7eca2;
@@ -34,6 +32,7 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   padding: 1vh 1vw;
+  z-index: 5;
 }
 
 .container-buttons-nav {
@@ -48,12 +47,10 @@ nav {
 .button-nav {
   display: flex;
   align-items: center;
-  /* texto centralizado no meio */
   justify-content: center;
   text-decoration: none;
   color: #636363;
   padding: 0.4em 1em;
-  /* deixa cada botão mais clicável */
   border-radius: 50px;
 }
 
@@ -184,88 +181,69 @@ header {
   border-radius: 1vw;
 }
 
-/* Tamanho do carousel */
-#carouselExampleCaptions {
-  width: 80vw;
-  height: 70vh;
-  margin: 40px auto;
-  position: relative;
+.carousel-background {
+  width: 100vw;
+  height: fit-content;
+  background: radial-gradient(ellipse at center, #d3d3d3 0%, #444 40%, #181818 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8vh;
 }
 
-/* Cada slide ocupa 100% do container */
-#carouselExampleCaptions .carousel-item {
+.carousel-background h1{
+  padding-bottom: 2vh;
+}
+
+.carousel-section {
+  width: 90vw; /* largura menor, controlada */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent; /* sem background aqui */
+  color: #fff;
+  height: 700px;
+}
+
+#sparqCarousel {
+  width: 100%;
   height: 100%;
-  position: relative;
 }
 
-/* Imagens preenchendo, contidas */
+.carousel-inner,
+.carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
 .carousel-item img {
   width: 100%;
-  height: 500px;
+  height: 100%;
   object-fit: cover;
   background: #000;
   /* fundo para preencher espaços */
   border-radius: 10px;
+  /* bordas arredondadas opcionais */
 }
 
-/* Indicadores retangulares */
-.carousel-indicators [data-bs-target] {
-  width: 30px;
-  height: 8px;
-  border-radius: 4px;
-  background-color: #000;
-  opacity: 0.5;
-  margin: 0 4px 0 0;
-}
-
-.carousel-indicators .active {
-  opacity: 1;
-  background-color: #000;
-}
-
-/* Legenda sobreposta no slide */
 .carousel-caption {
-  position: absolute;
-  bottom: 40px;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 6px;
   padding: 10px 20px;
-  color: #fff;
-  text-align: center;
   user-select: none;
 }
 
-/* Botões de controle */
+/* Botões de controle com tamanho proporcional */
 .carousel-control-prev,
 .carousel-control-next {
+  width: 40px;
   height: 100%;
   width: 50px;
   /* largura do botão */
   top: 0;
-  bottom: 0;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 10;
 }
 
-/* Botão anterior alinhado à esquerda */
-.carousel-control-prev {
-  left: 10px;
-}
-
-/* Botão próximo alinhado à direita */
-.carousel-control-next {
-  right: 10px;
-}
-
-/* Ícones das setas menores e mais proporcionais dentro do botão */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   width: 24px;
@@ -275,14 +253,19 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.7);
   display: block;
   margin: auto;
   transition: background-color 0.3s ease;
+
+  /* aumentar área do fundo */
+  padding: 10px;
+  /* aumenta o fundo além do ícone */
+  box-sizing: content-box;
+  /* padding não altera tamanho do elemento, cria espaço extra */
 }
 
-/* Hover efeito nos ícones */
+/* Hover permanece igual */
 .carousel-control-prev:hover .carousel-control-prev-icon,
 .carousel-control-next:hover .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.459);
 }
