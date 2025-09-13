@@ -136,9 +136,7 @@ header {
 .container-tittle-first {
   background-color: #fff;
   display: inline-block;
-  /* ocupa só o necessário */
   border-radius: 6px;
-  /* opcional, arredonda */
   width: fit-content;
   justify-content: center;
   margin-top: 2vh;
@@ -153,9 +151,23 @@ header {
   display: flex;
   align-items: center;
 }
-.container-img-text{
+
+.container-img-text {
   display: flex;
   padding: 2vw;
+}
+
+.container-text-first {
+  display: inline-block;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 6px;
+  padding: 3vw;
+}
+
+.text-first {
+  font-size: 1.5vw;
+  background-color: #fff;
 }
 
 .software-img1-first {
@@ -191,18 +203,20 @@ header {
   padding: 8vh;
 }
 
-.carousel-background h1{
+.carousel-background h1 {
   padding-bottom: 2vh;
 }
 
 .carousel-section {
-  width: 90vw; /* largura menor, controlada */
+  width: 90vw;
+  /* largura menor, controlada */
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: transparent; /* sem background aqui */
+  background: transparent;
+  /* sem background aqui */
   color: #fff;
   height: 700px;
 }
