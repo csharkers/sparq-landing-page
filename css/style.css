@@ -33,6 +33,16 @@ nav {
   transform: translateX(-50%);
   padding: 1vh 1vw;
   z-index: 5;
+  /* Estado inicial da animação */
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Classe para ativar a animação */
+.container-nav.animate {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 .container-buttons-nav {
