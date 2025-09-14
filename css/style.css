@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 * {
   font-family: "Arimo", sans-serif;
@@ -10,6 +10,11 @@
 body {
   margin: 0;
   padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 nav {
@@ -69,9 +74,8 @@ nav {
 }
 
 .button-nav:last-child {
-  background-color: #FF8832;
+  background-color: #ff8832;
   color: #ffffff;
-
 }
 
 header {
@@ -155,6 +159,7 @@ header {
 .tittle {
   font-weight: 900;
   font-size: 3vw;
+  background-color: #fff;
 }
 
 .container-software-first {
@@ -203,32 +208,148 @@ header {
   border-radius: 1vw;
 }
 
+/* Seção Devs */
+.dev-section {
+  width: 100%;
+  min-height: 680px;
+  background-image: url("../assets/backgroundSection.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 3vw 2vw 5vw 3vw; /* padding para conter o conteúdo */
+  box-sizing: border-box;
+}
+
+/* Título com padding acima */
+.dev-section .tittle {
+  padding: 3vw 2vw 5vw 3vw;
+  background-color: transparent;
+}
+
+/* Cards em desktop */
+.card-dev {
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .dev-cards-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem; /* padding ajustado para espaçamento agradável */
+    box-sizing: border-box;
+    width: 100%; /* ocupa toda largura até o max-width */
+  }
+  .dev-card-inner {
+    border-radius: 0 !important;
+    margin-bottom: 0 !important;
+    box-shadow: none; /* Se não quiser sombra, remova! */
+  }
+  .card-dev {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Card visual com borda arredondada e espaçamento no mobile */
+@media (max-width: 767.98px) {
+  .card-dev {
+    margin-bottom: 24px !important;
+  }
+}
+
+.dev-card-inner {
+  background: #fff !important;
+  border: 1px solid #fff !important; /* Borda branca */
+  box-shadow: none !important; /* Remove sombra/coloração */
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dev-photo {
+  width: 130px;
+  height: 130px;
+  background: #cccccc;
+  border-radius: 50%;
+  margin-bottom: 1vw;
+  /* Para adicionar foto, use: background-image: url("assets/foto.jpg"); background-size: cover; background-position: center; */
+  display: inline-block;
+}
+
+.dev-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.dev-role {
+  font-size: 1em;
+  color: #535353;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.dev-contacts {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dev-link {
+  color: #4d4d4d;
+  font-size: 1.6em;
+  transition: color 0.2s;
+}
+
+.dev-link:hover {
+  color: #ff8832;
+}
+
+@media (max-width: 992px) {
+  .dev-photo {
+    width: 85px;
+    height: 85px;
+  }
+  .dev-card-inner {
+    min-height: 220px !important;
+  }
+}
+
 .carousel-background {
   width: 100vw;
-  height: fit-content;
-  background: radial-gradient(ellipse at center, #d3d3d3 0%, #444 40%, #181818 100%);
+  background-image: url("../assets/backgroundFirstSection.png");
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8vh;
+  padding: 10vh; /* diminuído de 8vh para 4vh para menos espaçamento */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .carousel-background h1 {
+  color: #000;
   padding-bottom: 2vh;
 }
 
 .carousel-section {
-  width: 90vw;
-  /* largura menor, controlada */
+  width: 90vw; /* reduzido de 90vw para 70vw */
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: transparent;
-  /* sem background aqui */
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
-  height: 700px;
+  height: 500px; /* reduzido de 700px para 500px */
 }
 
 #sparqCarousel {
