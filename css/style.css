@@ -56,7 +56,7 @@ nav {
 }
 
 .img-logo {
-    width: 8vw;
+    width: 15vh;
 }
 
 .button-nav {
@@ -102,19 +102,21 @@ header {
 
 .img-header {
     width: 35vw;
+    min-width: 400px;
 }
 
-.tittle-header {
+.title-header {
     color: #fff;
     font-weight: 900;
+    font-size: 10vh;
 }
 
-.container-subtittle-header {
+.container-subtitle-header {
     display: flex;
     align-items: center;
 }
 
-.subtittle-header {
+.subtitle-header {
     margin: 0;
     color: #fff;
 }
@@ -144,10 +146,10 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 80vh;
+    height: fit-content;
 }
 
-.container-tittle-first {
+.container-title-first {
     background-color: #fff;
     display: inline-block;
     border-radius: 6px;
@@ -156,10 +158,11 @@ header {
     margin-top: 2vh;
 }
 
-.tittle {
+.title {
     font-weight: 900;
-    font-size: 3vw;
+    font-size: 6vh;
     background-color: #fff;
+    color: #1f1f1f;
 }
 
 .container-software-first {
@@ -208,6 +211,10 @@ header {
     border-radius: 1vw;
 }
 
+.software-imgComplete-first {
+    width: 0vw;
+}
+
 /* Seção Devs */
 .dev-section {
     width: 100%;
@@ -222,7 +229,7 @@ header {
 }
 
 /* Título com padding acima */
-.dev-section .tittle {
+.dev-section .title {
     padding: 3vw 2vw 5vw 3vw;
     background-color: transparent;
 }
@@ -231,40 +238,6 @@ header {
 .card-dev {
     padding: 0;
     margin: 0;
-}
-
-@media (min-width: 768px) {
-    .dev-cards-container {
-        max-width: 1400px;
-        margin: 0 auto;
-        border-radius: 12px;
-        overflow: hidden;
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 1rem 2rem;
-        /* padding ajustado para espaçamento agradável */
-        box-sizing: border-box;
-        width: 100%;
-        /* ocupa toda largura até o max-width */
-    }
-
-    .dev-card-inner {
-        border-radius: 0 !important;
-        margin-bottom: 0 !important;
-        box-shadow: none;
-        /* Se não quiser sombra, remova! */
-    }
-
-    .card-dev {
-        margin-bottom: 0 !important;
-    }
-}
-
-/* Card visual com borda arredondada e espaçamento no mobile */
-@media (max-width: 767.98px) {
-    .card-dev {
-        margin-bottom: 24px !important;
-    }
 }
 
 .dev-card-inner {
@@ -289,23 +262,28 @@ header {
 }
 
 .dev-davi {
-    background-image: url("/assets/davi.jpg"); background-size: cover; 
+    background-image: url("/assets/davi.jpg");
+    background-size: cover;
     background-position: center;
 }
+
 .dev-daniel {
-    background-image: url("/assets/daniel.jpg"); background-size: cover; 
+    background-image: url("/assets/daniel.jpg");
+    background-size: cover;
     background-position: center;
 }
+
 .dev-iruam {
-    background-image: url("/assets/iruam.jpg"); background-size: cover; 
+    background-image: url("/assets/iruam.jpg");
+    background-size: cover;
     background-position: center;
 }
+
 .dev-gustavo {
-    background-image: url("/assets/gustavo.jpg"); background-size: cover; 
+    background-image: url("/assets/gustavo.jpg");
+    background-size: cover;
     background-position: center;
 }
-
-
 
 .dev-name {
     font-size: 1.2em;
@@ -336,39 +314,21 @@ header {
     color: #ff8832;
 }
 
-@media (max-width: 992px) {
-    .dev-photo {
-        width: 85px;
-        height: 85px;
-    }
-
-    .dev-card-inner {
-        min-height: 220px !important;
-    }
-}
-
 .carousel-background {
-    width: 100vw;
-    background-image: url("../assets/backgroundFirstSection.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10vh;
-    /* diminuído de 8vh para 4vh para menos espaçamento */
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
-.carousel-background h1 {
-    color: #000;
-    padding-bottom: 2vh;
+  width: 100vw;
+  background-image: url("../assets/backgroundFirstSection.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; /* substituir 100% 100% por cover */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8vh 0; /* reduzir o padding lateral para 0 */
 }
 
 .carousel-section {
     width: 90vw;
-    /* reduzido de 90vw para 70vw */
+    min-width: 300px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -378,7 +338,6 @@ header {
     background-repeat: no-repeat;
     color: #fff;
     height: 500px;
-    /* reduzido de 700px para 500px */
 }
 
 #sparqCarousel {
@@ -460,4 +419,167 @@ header {
     /* tamanho da fonte */
     justify-content: center;
     align-items: center;
+}
+
+@media (min-width: 768px) {
+  .dev-cards-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .dev-card-inner {
+    border-radius: 0 !important;
+    margin-bottom: 0 !important;
+    box-shadow: none;
+  }
+
+  .card-dev {
+    margin-bottom: 0 !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .card-dev {
+    margin-bottom: 24px !important;
+  }
+  /* Ajustes para cards mobile */
+
+  .card-dev {
+    width: 90%;
+    max-width: 200px;
+    margin: 0 auto 24px auto;
+  }
+
+  .dev-card-inner {
+    min-height: auto !important;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .dev-photo {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 1.5rem;
+  }
+
+  .dev-name {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .dev-role {
+    font-size: 1.0em;
+    color: #535353;
+    margin-bottom: 1rem;
+  }
+
+  .dev-link {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 992px) {
+  .dev-photo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .dev-card-inner {
+    min-height: 220px !important;
+  }
+
+  /* Header empilhado em coluna */
+  .container-elements-header {
+    margin-top: 10vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3vh;
+  }
+
+  .container-img-header {
+    margin-left: 0;
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .img-header {
+    width: 70vw;
+    min-width: 180px;
+    max-width: 350px;
+  }
+
+  header {
+    padding: 5vw 2vw;
+    height: auto;
+  }
+
+  .title-header {
+    color: #000000;
+    font-size: 6vh;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 4vh;
+  }
+
+  /* Primeira seção */
+  .first-section {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 4vh;
+  }
+
+  .container-img-text {
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw 0;
+  }
+
+  .container-software-first {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .software-img1-first,
+  .software-img2-first,
+  .software-img3-first {
+    width: 0vw;
+  }
+
+  .software-imgComplete-first {
+    width: 90vw;
+    min-width: 300px;
+    margin-bottom: 1vh;
+  }
+
+  .container-text-first {
+    padding: 4vw 2vw;
+  }
+
+  .text-first {
+    font-size: 2vh;
+    text-align: center;
+  }
+
+  .carousel-background {
+    background-size: cover;
+    padding: 5vh 0vw;
+  }
+
 }
