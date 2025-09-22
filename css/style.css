@@ -283,12 +283,29 @@ header {
 .dev-photo {
     width: 130px;
     height: 130px;
-    background: #cccccc;
     border-radius: 50%;
     margin-bottom: 1vw;
-    /* Para adicionar foto, use: background-image: url("assets/foto.jpg"); background-size: cover; background-position: center; */
     display: inline-block;
 }
+
+.dev-davi {
+    background-image: url("/assets/davi.jpg"); background-size: cover; 
+    background-position: center;
+}
+.dev-daniel {
+    background-image: url("/assets/daniel.jpg"); background-size: cover; 
+    background-position: center;
+}
+.dev-iruam {
+    background-image: url("/assets/iruam.jpg"); background-size: cover; 
+    background-position: center;
+}
+.dev-gustavo {
+    background-image: url("/assets/gustavo.jpg"); background-size: cover; 
+    background-position: center;
+}
+
+
 
 .dev-name {
     font-size: 1.2em;
