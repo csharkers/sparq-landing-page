@@ -14,22 +14,24 @@
   <nav>
     <div class="container-nav">
       <div class="container-logo">
-        <img class="img-logo" src="assets/image.png" alt="logo" />
+        <a href="#inicio">
+          <img class="img-logo" src="assets/image.png" alt="logo" />
+        </a>
       </div>
       <div class="container-buttons-nav">
-        <a class="button-nav" href="">
+        <a class="button-nav" href="#sobre">
           <p class="text-button-nav">Sobre</p>
         </a>
-        <a class="button-nav" href="">
+        <a class="button-nav" href="#devs">
           <p class="text-button-nav">Devs</p>
         </a>
-        <a class="button-nav" href="">
+        <a class="button-nav" href="#mais">
           <p class="text-button-nav">Mais</p>
         </a>
       </div>
     </div>
   </nav>
-  <header>
+  <header id="inicio">
     <div class="container-elements-header">
       <div class="container-text-header">
         <div class="container-title-header">
@@ -48,7 +50,7 @@
     </div>
   </header>
   <main>
-    <section class="first-section">
+    <section id="sobre" class="first-section">
       <div class="container-title-first">
         <!-- title é a classe padrão dos titulos, caso queira trocar cor ou tamanho pode definir inline -->
         <h1 class="title">Antecipe, Proteja, Preserve.</h1>
@@ -69,7 +71,7 @@
         </div>
       </div>
     </section>
-    <section class="second-section dev-section">
+    <section id="devs" class="second-section dev-section">
       <div>
         <h1 class="title">Conheça a nossa equipe.</h1>
       </div>
@@ -83,9 +85,12 @@
                 <h5 class="card-title dev-name">Davi Kirk</h5>
                 <p class="card-text dev-role">Dev Full Stack</p>
                 <div class="dev-contacts d-flex gap-2 mt-2">
-                  <a href="#" class="dev-link"><i class="fa-brands fa-github"></i></a>
-                  <a href="#" class="dev-link"><i class="fa-brands fa-linkedin"></i></a>
-                  <a href="#" class="dev-link"><i class="fa-solid fa-envelope"></i></a>
+                  <a href="https://github.com/DaviKirk" class="dev-link" target="_blank"><i
+                      class="fa-brands fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/davi-kirk-73b152327/" class="dev-link" target="_blank"><i
+                      class="fa-brands fa-linkedin"></i></a>
+                  <a href="mailto:davikirk2008@gmail.com" class="dev-link" target="_blank"><i
+                      class="fa-solid fa-envelope"></i></a>
                 </div>
               </div>
             </div>
@@ -98,9 +103,12 @@
                 <h5 class="card-title dev-name">Daniel Freire</h5>
                 <p class="card-text dev-role">Dev Full Stack</p>
                 <div class="dev-contacts d-flex gap-2 mt-2">
-                  <a href="#" class="dev-link"><i class="fa-brands fa-github"></i></a>
-                  <a href="#" class="dev-link"><i class="fa-brands fa-linkedin"></i></a>
-                  <a href="#" class="dev-link"><i class="fa-solid fa-envelope"></i></a>
+                  <a href="https://github.com/dev-DanielSilva" class="dev-link" target="_blank"><i
+                      class="fa-brands fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/dev-danielsilva/" class="dev-link" target="_blank"><i
+                      class="fa-brands fa-linkedin"></i></a>
+                  <a href="mailto:dev-DanielSilva@outlook.com" class="dev-link" target="_blank"><i
+                      class="fa-solid fa-envelope"></i></a>
                 </div>
               </div>
             </div>
@@ -113,9 +121,12 @@
                 <h5 class="card-title dev-name">Iruam Parreira</h5>
                 <p class="card-text dev-role">Eletrônica e Back-End</p>
                 <div class="dev-contacts d-flex gap-2 mt-2">
-                  <a href="#" class="dev-link"><i class="fa-brands fa-github"></i></a>
-                  <a href="#" class="dev-link"><i class="fa-brands fa-linkedin"></i></a>
-                  <a href="#" class="dev-link"><i class="fa-solid fa-envelope"></i></a>
+                  <a href="https://github.com/iruamfx" class="dev-link" target="_blank"><i
+                      class="fa-brands fa-github"></i></a>
+                  <a href="https://br.linkedin.com/in/iruam-r-0909632a3" class="dev-link" target="_blank"><i
+                      class="fa-brands fa-linkedin"></i></a>
+                  <a href="mailto:iruam.parreira@outlook.com" class="dev-link" target="_blank"><i
+                      class="fa-solid fa-envelope"></i></a>
                 </div>
               </div>
             </div>
@@ -128,9 +139,10 @@
                 <h5 class="card-title dev-name">Gustavo Schneider</h5>
                 <p class="card-text dev-role">Dev de Protótipos</p>
                 <div class="dev-contacts d-flex gap-2 mt-2">
-                  <a href="#" class="dev-link"><i class="fa-brands fa-github"></i></a>
-                  <a href="#" class="dev-link"><i class="fa-brands fa-linkedin"></i></a>
-                  <a href="#" class="dev-link"><i class="fa-solid fa-envelope"></i></a>
+                  <a href="https://github.com/GB-schneider" class="dev-link" target="_blank"><i
+                      class="fa-brands fa-github"></i></a>
+                  <a href="mailto:gustavobatistaschneider53@gmail.com" class="dev-link" target="_blank"><i
+                      class="fa-solid fa-envelope"></i></a>
                 </div>
               </div>
             </div>
@@ -139,7 +151,7 @@
       </div>
     </section>
     <div class="carousel-background">
-      <section class="third-section carousel-section">
+      <section id="mais" class="third-section carousel-section">
         <div>
           <h1 id="carousel-title" class="title">O que nós produzimos.</h1>
         </div>
